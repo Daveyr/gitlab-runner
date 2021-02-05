@@ -3,7 +3,7 @@ A runner is a server that is able to execute a CI/CD pipeline. These pipelines c
 
 As long as the base image in your .gitlab-ci.yml file is compatible with arm architecture, this runner will work on a Raspberry Pi. If the base image isn't compatible then you will have the same experience as [this](https://www.talvbansal.me/blog/maximising-gitlab-ci-s-free-tier/). Of course, you can build this image on an x86 machine and it will work with most base images a CI file is likely to contain.
 
-*Note* that this currently does not work when building the image on windows systems, unless possibly if you use [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). It is verified working on x86 Ubuntu 20 and arm Raspbian.
+**Note** that this currently does not work when building the image on windows systems, unless possibly if you use [WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). It is verified working on x86 Ubuntu 20 and arm Raspbian.
 
 ## To build
 
