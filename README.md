@@ -1,6 +1,7 @@
 # README
-This repository contains a dockerfile and bash scripts to make a Gitlab runner. As long as the base image in your .gitlab-ci.yml file is compatible with arm architecture, this runner will work on a Raspberry Pi. If the base image isn't compatible then you will have the same experience as [this](https://www.talvbansal.me/blog/maximising-gitlab-ci-s-free-tier/).
-Of course, you can build this image on an x86 machine and it will work with most base images a CI file is likely to contain.
+A runner is a server that is able to execute a CI/CD pipeline. These pipelines contain one or more jobs that check a version controlled repository for build errors, code style, etc. This repository contains a dockerfile and bash scripts to make a Gitlab runner. It is intended to be used with a Gitlab repository that has a CI/CD pipeline configured according to a `.gitlab-ci.yml` file in the parent directory. 
+
+As long as the base image in your .gitlab-ci.yml file is compatible with arm architecture, this runner will work on a Raspberry Pi. If the base image isn't compatible then you will have the same experience as [this](https://www.talvbansal.me/blog/maximising-gitlab-ci-s-free-tier/). Of course, you can build this image on an x86 machine and it will work with most base images a CI file is likely to contain.
 
 ## To build
 
