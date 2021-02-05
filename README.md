@@ -14,6 +14,8 @@ Settings> CI / CD> Runners>Specific Runners
 docker build -t gitlab-runner --build-arg token=<TOKEN> .
 ```
 
+Optionally, you can specify the number of concurrent jobs by adding `--build-arg concurrent=X` to the above command, where `X` is the number of concurrent builds. The default value is 1. 
+
 ## To run
 
 From https://itnext.io/docker-in-docker-521958d34efd. Note we need to mount a volume as we run the container. This is because the runner depends on Docker. Running Docker in a Docker container is tricky so the easiest method is to "borrow" the host Docker service instead, which we do by mounting its .sock file.
