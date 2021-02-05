@@ -1,11 +1,12 @@
 FROM ubuntu:18.04
 ARG token
+ARG concurrent=1
 ENV DEBIAN_FRONTEND=noninteractive
-COPY runner_install.sh /usr/src
-COPY runner_configure.sh /usr/src
 RUN apt update
 RUN apt install curl -y
+COPY runner_install.sh /usr/src
+COPY runner_configure.sh /usr/src
 WORKDIR /usr/src/ 
 RUN sh runner_install.sh
-RUN sh runner_configure.sh $token
+RUN sh runner_configure.sh $token $concurrent
 ENTRYPOINT gitlab-runner --debug run
