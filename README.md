@@ -1,5 +1,5 @@
 # README
-This repository contains a dockerfile and bash scripts to make a Gitlab runner. As long as the base image in your .gitlab-ci.yml file is compatible with arm architecture, this runner will work on a Raspberry Pi.
+This repository contains a dockerfile and bash scripts to make a Gitlab runner. As long as the base image in your .gitlab-ci.yml file is compatible with arm architecture, this runner will work on a Raspberry Pi. If the base image isn't compatible then you will have the same experience as [this](https://www.talvbansal.me/blog/maximising-gitlab-ci-s-free-tier/).
 Of course, you can build this image on an x86 machine and it will work with most base images a CI file is likely to contain.
 
 ## To build
@@ -8,7 +8,7 @@ Instructions from https://www.devils-heaven.com/gitlab-runner-finally-use-your-r
 Settings> CI / CD> Runners>Specific Runners
 
 ```
-docker build -t gitlab-runner --build-arg=<TOKEN> .
+docker build -t gitlab-runner --build-arg token=<TOKEN> .
 ```
 
 ## To run
