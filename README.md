@@ -14,7 +14,7 @@ Settings> CI / CD> Runners>Specific Runners
 docker build -t gitlab-runner --build-arg token=<TOKEN> .
 ```
 
-Optionally, you can specify the number of concurrent jobs by adding `--build-arg concurrent=X` to the above command, where `X` is the number of concurrent builds. The default value is 1. 
+Optionally, you can specify the number of concurrent jobs by adding `--build-arg concurrent=X` to the above command, where `X` is the number of concurrent jobs. The default value is 1. 
 
 ## To run
 
