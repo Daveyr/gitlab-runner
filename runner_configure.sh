@@ -6,4 +6,4 @@ gitlab-runner register -n \
     --description "Pi Runner" \
     --docker-image "docker:stable" \
     --docker-privileged \
-    --pull-policy "if-not-present"
+    --docker-pull-policy "if-not-present"
