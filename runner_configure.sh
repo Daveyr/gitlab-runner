@@ -5,4 +5,5 @@ gitlab-runner register -n \
     --executor docker \
     --description "Pi Runner" \
     --docker-image "docker:stable" \
-    --docker-privileged
+    --docker-privileged \
+    --pull-policy "if-not-present"
